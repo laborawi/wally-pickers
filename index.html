@@ -2,29 +2,87 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WallyPickers</title>
   <style>
     body {
-      font-family: sans-serif;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
-      margin: 0;
-      background: #f9f9f9;
+      background: linear-gradient(to right, #f9f9f9, #f1f1f1);
     }
+
     h1 {
-      color: #222;
+      font-size: 3rem;
+      color: #333;
+      animation: pulse 2s infinite;
     }
+
     p {
-      color: #444;
+      font-size: 1.2rem;
+      color: #666;
+      animation: fadeIn 2s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    .paneles {
+      display: flex;
+      gap: 1rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .panel {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      min-width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .panel:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
     }
   </style>
 </head>
 <body>
   <h1>WallyPickers</h1>
   <p>Plataforma interna de gestión logística multicanal.</p>
+
+  <div class="paneles">
+    <div class="panel">
+      <strong>Pedidos pendientes</strong>
+      <p>Ver los últimos pedidos por preparar.</p>
+    </div>
+    <div class="panel">
+      <strong>Imprimir etiquetas</strong>
+      <p>Genera etiquetas para envíos en un clic.</p>
+    </div>
+    <div class="panel">
+      <strong>Modificar direcciones</strong>
+      <p>Corrige datos antes del envío.</p>
+    </div>
+    <div class="panel">
+      <strong>Precios y peso</strong>
+      <p>Calcula el coste según peso y destino.</p>
+    </div>
+  </div>
 </body>
 </html>
