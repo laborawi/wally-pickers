@@ -1,88 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WallyPickers</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WallyPickers - Soluciones de Trading</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: linear-gradient(to right, #f9f9f9, #f1f1f1);
+      padding: 0;
+      background-color: #f4f4f4;
     }
-
-    h1 {
-      font-size: 3rem;
-      color: #333;
-      animation: pulse 2s infinite;
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: #666;
-      animation: fadeIn 2s ease-in-out forwards;
-      opacity: 0;
-    }
-
-    .paneles {
-      display: flex;
-      gap: 1rem;
-      margin-top: 3rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .panel {
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      min-width: 250px;
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem 0;
       text-align: center;
-      transition: transform 0.3s ease;
     }
-
-    .panel:hover {
-      transform: scale(1.05);
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
     }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+    nav a {
+      color: #fff;
+      padding: 1rem;
+      text-decoration: none;
     }
-
-    @keyframes fadeIn {
-      to { opacity: 1; }
+    nav a:hover {
+      background-color: #555;
+    }
+    .container {
+      padding: 2rem;
+    }
+    .section {
+      background-color: #fff;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #333;
+      color: #fff;
     }
   </style>
 </head>
 <body>
-  <h1>WallyPickers</h1>
-  <p>Plataforma interna de gestión logística multicanal.</p>
 
-  <div class="paneles">
-    <div class="panel">
-      <strong>Pedidos pendientes</strong>
-      <p>Ver los últimos pedidos por preparar.</p>
-    </div>
-    <div class="panel">
-      <strong>Imprimir etiquetas</strong>
-      <p>Genera etiquetas para envíos en un clic.</p>
-    </div>
-    <div class="panel">
-      <strong>Modificar direcciones</strong>
-      <p>Corrige datos antes del envío.</p>
-    </div>
-    <div class="panel">
-      <strong>Precios y peso</strong>
-      <p>Calcula el coste según peso y destino.</p>
-    </div>
-  </div>
+<header>
+  <h1>WallyPickers</h1>
+  <p>Soluciones de Trading para el Mercado Europeo y Latinoamericano</p>
+</header>
+
+<nav>
+  <a href="#sobre-nosotros">Sobre Nosotros</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<div class="container">
+  <section id="sobre-nosotros" class="section">
+    <h2>Sobre Nosotros</h2>
+    <p>En WallyPickers, trabajamos con la comercialización de productos de consumo masivo de origen europeo, facilitando el acceso a mercados latinoamericanos.</p>
+  </section>
+
+  <section id="servicios" class="section">
+    <h2>Servicios</h2>
+    <ul>
+      <li>Logística directa e inversa</li>
+      <li>Almacenamiento de mercancía</li>
+      <li>Logística aérea y marítima internacional</li>
+      <li>Gestión de compras y control de inventarios</li>
+    </ul>
+  </section>
+
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>Teléfono: +34 640690504</p>
+    <p>Email: laborawies@gmail.com</p>
+    <p>Ubicación: Guadajalara, España</p>
+  </section>
+</div>
+
+<footer>
+  <p>&copy; 2025 WallyPickers. Todos los derechos reservados.</p>
+</footer>
+
 </body>
 </html>
